@@ -31,11 +31,11 @@ DEBUG_LOG = INSTALL_DIR / "python_debug.log"
 CUSTOM_DOMAIN_FILE = INSTALL_DIR / "custom_domain.txt" # 存储最终使用的域名
 
 # ====== 全局可配置参数（可直接在此处修改） ======
-USER_NAME = "streamlit_app"         # 用户名
-UUID = "93945a47-8c22-4f79-b7d2-8fad7ff9c45e"                     # UUID，留空则自动生成
-PORT = 41818                   # Vmess端口，留空或0则自动生成
-DOMAIN = "streamlit.hilink.dpdns.org"                   # 域名，留空则自动获取
-CF_TOKEN = "eyJhIjoiODYwMzYyNmRiMmE3MTgxMDBiMmRkNzcwNTg4MWVmMDAiLCJ0IjoiNGMzYjU5NzQtYmQ1Yi00NTdiLWIyMzMtYzQ1ZmFkMGVmNWIzIiwicyI6IlpqSmpabVV4T1RRdFkyRTJZeTAwT1RWakxXSmlOR0V0WVRCa01qSTVZMkZoTkRBdyJ9"                 # Cloudflare Token，留空则用Quick Tunnel
+USER_NAME = os.getenv("USER_NAME")
+UUID = os.getenv("UUID")
+PORT = os.getenv("PORT")
+DOMAIN = os.getenv("DOMAIN")
+CF_TOKEN = os.getenv("CF_TOKEN")
 # =========================================
 
 # 添加命令行参数解析
